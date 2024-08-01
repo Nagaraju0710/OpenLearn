@@ -15,10 +15,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 150px;
     background-color: white;
 }
-
 .logo a {
 
     font-size: 24px;
@@ -38,10 +37,14 @@ header {
     justify-content: center;
     gap: 30px;
     align-items: center;
-    text-decoration: none;
+    
     font-size: medium;
     font-family: sans-serif;
-    background-color: #d1e3f3;
+    background-color: #b7d4ec;
+}
+.topnavbar a {
+    text-decoration: none;
+    
 }
 
 /* .search-login {
@@ -78,10 +81,14 @@ header {
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    /* margin-right: 20px; */
     position: relative;
-
+    gap: 20px;
 }
-
+.int{
+    /* height: 50px; */
+    width: 100px;
+}
 .all-courses-btn {
     display: flex;
     align-items: center;
@@ -105,6 +112,10 @@ header {
 .all-courses-btn:hover {
     background-color: #005fa3;
 }
+/* .all-courses-btn::before {
+    content: "\1F4C1";
+    margin-right: 8px; */
+
 
 .dropdown-content {
     display: none;
@@ -134,6 +145,7 @@ header {
 .search-container {
     position: relative;
     width: 300px;
+    height: 30px;
 }
 
 .search-input {
