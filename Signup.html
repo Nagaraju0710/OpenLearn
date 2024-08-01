@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            background-color: rgb(151, 212, 218);
+            margin: 70px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 20px;
+        }
+
+        .signupcontainerform {
+            width: 400px;
+        }
+
+        body {
+            background-color:rgb(8, 112, 164);
+        }
+
+        .img-container {
+            padding-right: 30px;
+        }
+
+        .img-container img {
+            width: 500px;
+            height: 450px;
+            border-radius: 20px;
+        }
+        .text-center{
+            color: red;
+        }
+        .form-group label{
+             color: rgb(177, 85, 52);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="signup.gif" alt="Sign Up">
+        </div>
+        <div class="signupcontainerform">
+            <h2 class="text-center">Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter User Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Enter password Again" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+            <p class="text-center mt-3">Already have an account? <a href="login.html" style="color: rgb(11, 20, 20);">Login here</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            const user = {
+                username,
+                email,
+                phone,
+                password
+            };
+
+            localStorage.setItem('user', JSON.stringify(user));
+            alert('User registered successfully');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>
