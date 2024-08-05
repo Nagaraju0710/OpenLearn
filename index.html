@@ -6,48 +6,954 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #d24120;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background-color: #55ACEE;
+        }
+
+        .fa-instagram {
+            background-color: #d24120;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 2px 2px;
+
+            border-radius: 30px;
+        }
+
+        .fa-snapchat-ghost {
+            background: #fffc00;
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .div {
+            background-color: rgb(229, 239, 241);
+
+        }
+
+        span {
+            color: yellow;
+            height: 3px;
+            width: 35px;
+        }
+
+        .vl {
+            border-left: 1px solid grey;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+        }
+
+        .heading {
+            font-size: medium;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="topnavbar">
-            <!-- <ul class="nav-links"> -->
-                <a href="#">Resources</a>
-                <a href="#">Simplilearn for Business</a>
-                <a href="#">Become an Instructor</a>
-                <a href="#">Hire From Us</a>
-                <a href="#">Reviews</a>
-            
-            </div>
-            <div class="logo"> 
-                <div>
-                    <img src="logo.jpg" alt="" class="" width="150px" height="90px">
+        <div>
+            <div>
+                <nav class="navbar">
+                    <div class="topnavbar">
+                        <!-- <ul class="nav-links"> -->
+                        <a href="#">Resources</a>
+                        <a href="#">Simplilearn for Business</a>
+                        <a href="#">Become an Instructor</a>
+                        <a href="#">Hire From Us</a>
+                        <a href="#">Reviews</a>
+                    </div>
+
+
+
+                    <div class="logo">
+                        <div>
+                            <img src="logo.jpg" alt="" width="110px" height="60px" style="padding-top: 10px;">
+
+                        </div>
+
+                        <div class="button-container">
+                            <button class="all-courses-btn" onclick="toggleDropdown()">
+                                <span class="icon"></span>
+                                <img src="logo1.PNG" width="20px" height="10%" style="margin-right: 20px;">
+                                All Courses
+                            </button>
+                        </div>
+                        <!-- dropDown Matter -->
+                        <div id="dropdown" class="dropdown-content">
+                            <div class="card">
+                                <img src="images/course1.png" alt="Course 1" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 1</h3>
+                                    <p>Introduction to Power BI</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/course2.jpg" alt="Course 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 2</h3>
+                                    <p>Introduction to Sql and MySql</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/course3.jpg" alt="Course 3" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 3</h3>
+                                    <p>Introduction to Course Microsoft Details</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/course4.png" alt="Course 4" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 4</h3>
+                                    <p>Introduction to Course Wipro Details</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/course5.png" alt="Course 5" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 5</h3>
+                                    <p>Introduction to Course Infosys Details</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="images/course6.png" alt="Course 6" class="card-img">
+                                <div class="card-content">
+                                    <h3>Course 6</h3>
+                                    <p>Introduction to Course Sonix Details</p>
+                                </div>
+                            </div>
+                            <!-- Add more cards as needed -->
+                        </div>
                     
-                </div>
-                <div class="button-container">
-                   
-                        <button  class="all-courses-btn"  onclick="toggleDropdown()">
-                        <span class="icon"></span>
-                        <img src="logo1.PNG" width="20px" height="10%" style="margin-right: 20px;">
-                        All Courses
-                    </button>
-                </div>
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="What do you want to learn?">
-                    <button class="search-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M21 19l-5.793-5.793A6.987 6.987 0 0018 11a7 7 0 10-7 7 6.987 6.987 0 002.207-.793L19 21l2-2zm-10 0a5 5 0 110-10 5 5 0 010 10z"/></svg></button>
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="What do you want to learn?">
+                            <button class="search-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    width="24" height="24">
+                                    <path
+                                        d="M21 19l-5.793-5.793A6.987 6.987 0 0018 11a7 7 0 10-7 7 6.987 6.987 0 002.207-.793L19 21l2-2zm-10 0a5 5 0 110-10 5 5 0 010 10z" />
+                                </svg></button>
+                        </div>
+
+                        <div class="loginbutton">
+                            <a href="Signup.html"><button>Log in</button></a>
+                        </div>
+                </nav>
+            </div>
+            <!-- Animatad Div  -->
+
+            <div class="animationdiv">
+                <!-- <h1 id="Body" class="text-center"></h1><br /><br /><br /><br /><br /> -->
+                <center>
+                    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <div>
+                                    <img src="background.jpeg" alt="GFG" width="1500" height="480" alt="...">
+                                    
+                                </div>
+                                <video class="overlay-video"  controls loop width="450" height="320"  style="border-radius: 10px;" >
+                                    <source src="online.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
+                                <div class="carousel-caption text-white">
+                                    <h1 id="World">World,s #1</h1>
+                                    <h1 id="Online">Online Bootcamp</h1>
+                                    <p id="careers">5,000,000 careers advanced</p>
+                                    <p id="classes">1,500 live classes every month</p>
+                                    <p id="report">85% report carrer benefits including promotion or a new job</p>
+                                    <br /><br />
+                                    <button id="Explore"> Explore programs</button><br /><br /><br />
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex">
+                                    <img src="blackimage.jpeg" width="750" height="480" alt="...">
+                                    <img src="banner.jpeg" width="750" height="480" alt="...">
+                                </div>
+                                <div class="carousel-caption">
+                                    <h5 id="include">All our top programs include</h5>
+                                    <h5 id="AI" class="golden-text">Generative AI Components</h5><br />
+                                    <h1 id="change">Be a Leader in your field <br>change, Adapt and Build with AI</h1>
+                                    <br /><br /><br />
+                                    <button id="Gen" href="#" class="btn btn-primary">Explore Gen All
+                                        programs</button><br /><br /><br /><br />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+            <!-- Body Part Sreenivas -->
+
+            <div>
+                <div class="container text-center mt-5">
+                    <h5>Partnering with world's leading universities and companies</h5>
+                    <div class="scroll-container mt-4">
+                        <div class="scroll-content">
+                            <div class="d-inline-block mx-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                                    height="100px" width="100px" class="img-fluid logo-img" alt="AWS">
+                                <div class="logo-caption">AWS</div>
+                            </div>
+                            <div class="d-inline-block mx-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                                    height="100px" width="100px" class="img-fluid logo-img" alt="Microsoft">
+                                <div class="logo-caption">Microsoft</div>
+                            </div>
+                            <div class="d-inline-block mx-4">
+                                <img src="./images/SchoolImg.jpeg" class="img-fluid logo-img"
+                                    alt="Sri Venkateswara School">
+                                <div class="logo-caption">Sri Venkateswara School</div>
+                            </div>
+                            <div class="d-inline-block mx-4">
+                                <img src="./images/Accenture.jpeg" class="img-fluid logo-img" alt="Accenture">
+                                <div class="logo-caption">Accenture</div>
+                            </div>
+                            <div class="d-inline-block mx-4">
+                                <img src="./images/SvUniversity.jpeg" class="img-fluid logo-img"
+                                    alt="Sri Venkateswara University">
+                                <div class="logo-caption">Sri Venkateswara University</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h2>Get Certified, Get Ahead with Our Programs</h2>
+                        <p>Learn from global experts and get certified by the world's leading universities</p>
+                    </div>
                 </div>
 
-                <div>
-                    <a href="Signup.html"><button >Log in</button></a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                            <div class="sidebar-sticky">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Categories</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Most Popular</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Generative AI</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">AI & Machine Learning</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Data Science & Business Analytics</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Project Management</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Cyber Security</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Agile and Scrum</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Cloud Computing & DevOps</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Business and Leadership</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Software Development</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Product and Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">IT Service and Architecture</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Quality Management</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Digital Marketing</a>
+                                    </li>
+                                    <!-- Add more categories as needed -->
+                                </ul>
+                            </div>
+                        </nav>
+                        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                            <div
+                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
-                <div class="int">
-                    <button>Log in</button>
-
+                            </div>
+                            <div class="row">
+                                <!-- Course Card -->
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <img src="./images/Tata.jpeg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">TCS Certification Training</h5>
+                                            <p class="card-text">35 contact hours<br>8 industry case studies, 20
+                                                industry-based scenarios</p>
+                                            <p class="card-text"><small class="text-muted">4 weeks<br>Cohort Starts: 6th
+                                                    Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <img src="./images/Accenture.jpeg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Advanced Executive Program In Cybersecurity</h5>
+                                            <p class="card-text">Validate Your Learning with a transcript from IIT
+                                                Bangalore<br>Attend MasterClasses from top faculty of IIT Bangalore</p>
+                                            <p class="card-text"><small class="text-muted">6 Months<br>Cohort Starts:
+                                                    1st Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <img src="./images/ignio.jpeg" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">IGNIO Post Graduate Program in AI and Machine
+                                                Learning</h5>
+                                            <p class="card-text">250+ hours of Applied Learning<br>Live Virtual Classes
+                                                with Experts</p>
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    20th Sep '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image1.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Certified ScrumMaster (CSM)</h5>
+                                            <p class="card-text">2 days classroom Training<br>16 PMI PDUs &
+                                                Certification Offered</p>
+                                            <p class="card-text"><small class="text-muted">3 Days<br>Cohort Starts: 3rd
+                                                    Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image2.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Professional Course Certificate in Generative Ai and
+                                                Machine Learning</h5>
+                                            <p class="card-text">Program completion certificate from E&CT Academy, IIT
+                                                Kanpur</p>
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    21st Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image3.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">ITIL 4 Foundation</h5>
+                                            <p class="card-text">Simplelearn jobAssist Program<br>9 tools & Rigonuos
+                                                curriculam</p>
+                                            <p class="card-text"><small class="text-muted">4 weeks<br>Cohort Starts: 6th
+                                                    Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image4.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Proffessional Certificate Course In Data Science</h5>
+                                            <p class="card-text">Simple Learn JobAssist Program<br>13ntools & Rigouns
+                                                curicullam</p>
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    5th Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image5.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Proffessional Certification In Product Management
+                                            </h5>
+                                            <p class="card-text">Program completion certificates from E & CT Academy,IIT
+                                                Kanpur</p>
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    5th Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image6.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Data Scientist</h5>
+                                            <p class="card-text">
+                                            <p></p>Simple learn jobAssist Program <br> 14 tools &Rigonus curiculam
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    3rd Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image7.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Azure Cloud Architect</h5>
+                                            <p class="card-text">Simple learn JobAssists Program<br>6 tools & Rigounous
+                                                curriculam</p>
+                                            <p class="card-text"><small class="text-muted">11 Months<br>Cohort Starts:
+                                                    10th Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image8.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Advanced Certification in UI UX Design</h5>
+                                            <p class="card-text">Attend masterclasses from top IIT Bangalore Faculty</p>
+                                            <p class="card-text"><small class="text-muted">5 Months<br>Cohort Starts:
+                                                    10th Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="card-body">
+                                            <img src="./images/image9.jpeg" alt="" width="340px" height="170px">
+                                            <h5 class="card-title">Proffessional Certification Program in CyberSecurity
+                                                - Red Team</h5>
+                                            <p class="card-text">Attend MAsterclasses From IIT Kanpur
+                                                Faculty<br>Seamless access to integrated labs on Simplelearns LMS</p>
+                                            <p class="card-text"><small class="text-muted">6 Months<br>Cohort Starts:
+                                                    7th Aug '24</small></p>
+                                            <a style="margin-left: 60px;" href="#" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <center>
+                                    <a href="#" id="v1">View All</a>
+                                </center>
+                            </div>
+                        </main>
+                    </div>
                 </div>
-            </div> 
+
+                <!-- Rajitha -->
+
+                <div style="margin-top: 80px;">
+                    <form class="div">
+                        <div class="container">
+                            <div class="row" class="div">
+                                <div class="col-12">
+
+                                    <p>Our Online Bootcamp</p>
+                                </div>
+                                <div class="col-12">
+                                    <h1>An immersive learning experience</h1>
+                                </div>
+
+
+                                <div class="col-lg-3 col-sm-12" class="bg-color">
+                                    <img
+                                        src="https://www.simplilearn.com/ice9/assets/home/v1.gif?w=50&dpr=1" /><br /><br />
+                                    <h6>Develop skills for real career growth</h6><br />
+                                    <p>Cutting-edge curriculum designed in guidance with industry and academia to
+                                        develop job-ready
+                                        skills</p><br />
+                                </div>
+
+                                <div class="col-lg-3 col-sm-12">
+                                    <img
+                                        src="https://www.simplilearn.com/ice9/assets/home/v2.gif?w=50&dpr=1 " /><br /><br />
+                                    <h6>Learn from experts active in their field, not out-of-touch trainers</h6><br />
+                                    <p>Leading practitioners who bring current best practices and case studies to
+                                        sessions that fit into
+                                        your work schedule.</p><br />
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <img
+                                        src="https://www.simplilearn.com/ice9/assets/home/v3.gif?w=50&dpr=1" /><br /><br />
+                                    <h6>Learn by working on real-world problems </h6><br />
+                                    <p>Capstone projects involving real world data sets with virtual labs for hands-on
+                                        learning </p>
+                                    <br />
+
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <img
+                                        src="https://www.simplilearn.com/ice9/assets/home/v4.gif?w=50&dpr=1" /><br /><br />
+                                    <h6>Structured guidance ensuring learning never stops</h6><br />
+                                    <p>24x7 Learning support from mentors and a community of like-minded peers to
+                                        resolve any conceptual
+                                        doubts</p><br />
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </form>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>Hear it from our Alumni</h1><br />
+
+                            <div style="display: flex;">
+                                <div>
+                                    <h1>4.5</h1>
+                                </div>
+                                <div>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <div
+                                    style="margin-left: 10px; padding-top: 10px; height: 60px; border-left: 2px solid gray;">
+                                </div>
+                                <div>
+                                    <img style="margin-left: 10px;"
+                                        src="https://www.simplilearn.com/ice9/assets/home/switchup.png?w=128&dpr=1" />
+                                </div>
+                            </div>
+
+                            <br />
+                            <div style="display: flex;">
+                                <div>
+                                    <h1>4.5</h1>
+                                </div>
+                                <div>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <div
+                                    style="margin-left: 10px; padding-top: 10px; height: 60px; border-left: 2px solid gray;">
+                                </div>
+                                <div>
+                                    <img style="margin-left: 10px;"
+                                        src="https://www.simplilearn.com/ice9/assets/home/trustpilot_v1.png?w=200&dpr=1" />
+                                </div>
+                            </div>
+                            <br />
+                            <div style="display: flex;">
+                                <div>
+                                    <h1>4.4</h1>
+                                </div>
+                                <div>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <div
+                                    style="margin-left: 10px; padding-top: 10px; height: 60px; border-left: 2px solid gray;">
+                                </div>
+                                <div>
+                                    <img style="margin-left: 10px;"
+                                        src="https://www.simplilearn.com/ice9/assets/home/course-report.png?w=160&dpr=1" />
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+                            <video width="550" height="420" controls style="border-radius: 10px;">
+                                <source src="online.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- krishna sai -->
+
+            <div>
+                <h1 id="Body" class="text-center"></h1><br /><br /><br /><br /><br />
+                <center>
+                    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="d-flex">
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img class="floatright" src="images/krish1.jpeg" alt="GFG" width="300" height="200"
+                                    alt="...">
+                                <img class="floatright" src="images/krish2.jpeg" width="300" height="200" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex">
+                                    <img class="floatright" src="images/krish3.jpeg" width="300" height="200" alt="...">
+                                    <img class="floatright" src="images/krish4.jpeg" width="300" height="200" alt="...">
+                                </div>
+
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </center>
+                <center>
+                    <div style="display: flex; gap: 200px; margin-left: 100px;">
+
+                        <div>
+                            <section class="training-solutions">
+                                <h1 id="Employ">Employee and Team <br /> Training Solutions</h1><br /><br />
+                                <p id="Curriculum">Curriculum tailored to your organization,<br /> delivered with
+                                    white-glove
+                                    service and support</p><br /><br /><br /><br />
+                                <a href="https://www.simplilearn.com/business" target="_blank"></a>
+                                <button id="demo" href="#" class="btn btn-primary">Request A Free
+                                    Demo</button><br /><br />
+                        </div>
+                        <div>
+                            <img src="images/krish5.jpeg" alt="Trulli" width="600" height="400">
+                        </div>
+                    </div>
+                    <img src="images/krish6.jpeg" alt="Trulli" width="1200" height="400">
+                </center>
+
+            </div>
+
+
+
+            <!-- Footer section -->
+
+            <div>
+                <div class="contentfooter">
+                    <div class="phoneimg">
+                        <h1>Learn free on the App</h1>
+                        <p>Download the lessons and learn anytime, anywhere from the free <br /> courses available on
+                            our app
+                        </p>
+                        <img src="images/images.jpg" alt="" style="height: 370px;">
+                    </div>
+                    <div class="parentqrcode">
+                        <div id="qrcode">
+                            <p>Scan this QR code on your camera <br />app to download the app</p>
+                            <img src="images/images.png" alt="">
+                        </div>
+                        <hr />
+                        <div class="onlinebutton">
+                            <a href=""><img src="images/google.png" alt="" style="width: 170px;"></a>
+                            <a href=""><img src="images/playstore.png" alt="" style="width: 160px;"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="socialmedia">
+                    <div class="footer2">
+                        <div>
+                            <div>
+                                <p>Follow us!</p>
+                                <button
+                                    style="width: 150px;height: 40px;background-color: black;color: white;border: 1px solid white;">Refer
+                                    and Earn</button>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                            <div>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="#" class="fa fa-youtube"></a>
+                                <a href="#" class="fa fa-snapchat-ghost"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Company</h4>
+                            <a href="">
+                                <p>About us</p>
+                            </a>
+                            <a href="">
+                                <p>Careers</p>
+                            </a>
+                            <a href="">
+                                <p>News Room</p>
+                            </a>
+                            <a href="">
+                                <p>Alumini Speak</p>
+                            </a>
+                            <a href="">
+                                <p>Grievance redressal</p>
+                            </a>
+                            <a href="">
+                                <p>Contact us</p>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h4>Work With Us</h4>
+                            <a href="">
+                                <p>Become an instructor</p>
+                                <a href="">
+                                    <p>Blog as guest</p>
+                                </a>
+                        </div>
+
+                        <div>
+                            <h4>Discover</h4>
+                            <a href="">
+                                <p>Free Courses</p>
+                            </a>
+                            <a href="">
+                                <p>Skillup Sitemap</p>
+                            </a>
+                            <a href="">
+                                <p>Resources</p>
+                            </a>
+                            <a href="">
+                                <p>RSS feed</p>
+                            </a>
+                            <a href="">
+                                <p>City Sitemap</p>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h4>For Businesses</h4>
+                            <a href="">
+                                <p>Corporate training</p>
+                            </a>
+                            <a href="">
+                                <p>Simplilearn Learning Hub+</p>
+                            </a>
+                            <a href="">
+                                <p>Guranteed-to-run Classes </p>
+                            </a>
+                            <a href="">
+                                <p>Partners</p>
+                            </a>
+                        </div>
+                        <div>
+                            <h4>Learn on the Go!</h4>
+                            <a href=""><img src="images/Andriod.png" alt=""
+                                    style="width: 150px;border: 1px solid white;"></a>
+                            <a href=""><img src="images/ios.png" alt=""
+                                    style="width: 150px;border: 1px solid white;"></a>
+
+                        </div>
+                    </div>
+
+                    <hr style="width: 90%;color: lightgray;" />
+
+                    <div style="width: 90%;margin-left: 90px;margin-top: 70px">
+                        <h3>Trending Post Graduate Programs</h3>
+                        <a href="">
+                            <p style="font-size: small;font-weight: lighter; color: rgb(143, 142, 142);">Artificial
+                                Intelligence
+                                Course | Cloud Computing Certification Course | Full Stack Web Development Course | PG
+                                in Data
+                                Science | Product Management Certification Course | Blockchain Course | Machine Learning
+                                Course
+                                | Cyber Security Course in India | Project Management Certification Course | Lean Six
+                                Sigma
+                                Certification Course | Data Analytics Program | AI and ML Course | Business Analysis
+                                Certification Course | Data Engineering Certification Courses | Digital Marketing
+                                Certification
+                                Program</p>
+                        </a>
+                    </div>
+
+                    <div style="width: 90%;margin-left: 90px;margin-top: 70px;">
+                        <h3>Trending Master Programs</h3>
+                        <a href="">
+                            <p style="font-size: small;font-weight: lighter; color: rgb(143, 142, 142);">PMP Plus
+                                Certification
+                                Training Course | Data Science Certifiation Course | Data Analyst Course | Masters in
+                                Artificial
+                                Intelligence | Cloud Architect Certification Training Course | DevOps Engineer
+                                Certification
+                                Training Course | Digital Marketing Course | Cyber Security Expert Course | Business
+                                Analyst
+                                Course</p>
+                    </div>
+
+                    <div style="width: 90%;margin-left: 90px;margin-top: 70px;">
+                        <h3>Trending Courses</h3>
+                        <a href="">
+                            <p style="font-size: small;font-weight: lighter; color: rgb(143, 142, 142);">PMP
+                                Certification
+                                Training Course | CSM Certification Course | Data Science with Python Course | AWS
+                                Certification
+                                | CEH Certification | AWS Technical Essentials | AWS DevOps Certification | ITIL
+                                Certification |
+                                Architecting on AWS Certification | AZ 900 Certification | AZ 400 Certification | SAFe
+                                Certification | CISSP Certification Training | Tableau Certification Course | Lean Six
+                                Sigma
+                                Green Belt Certification | Lean Six Sigma Black Belt Certification | Power BI
+                                Certification
+                                Course</p>
+                    </div>
+
+                    <div style="width: 90%;margin-left: 90px;margin-top: 70px;">
+                        <h3>Trending Categories</h3>
+                        <a href="">
+                            <p style="font-size: small;font-weight: lighter; color: rgb(143, 142, 142);">Project
+                                Management
+                                Courses | AWS Courses | IT Service and Architecture | Digital Marketing | DevOps | AI &
+                                Machine
+                                Learning | Big Data | Business and Leadership | Software Engineering Certifications |
+                                Web
+                                Development Courses | Online Certifications | Generative AI Courses | Quality Management
+                                Courses
+                                | Agile Certifications | Cloud Computing Courses | Cyber Security Courses | Coding
+                                Courses |
+                                Cloud Engineer Certification | Analytics Courses | PG Courses | Computer Programming
+                                Courses</p>
+                    </div>
+
+                    <div style="width: 90%;margin-left: 90px;margin-top: 70px">
+                        <h3>Trending Resources</h3>
+                        <a href="">
+                            <p style="font-size: small;font-weight: lighter; color: rgb(143, 142, 142);">Python Tutorial
+                                |
+                                JavaScript Tutorial | Java Tutorial | Angular Tutorial | Node.js Tutorial | Docker
+                                Tutorial |
+                                Git Tutorial | Kubernetes Tutorial | Power BI Tutorial | CSS Tutorial</p>
+                    </div>
+
+                    <div style="display: flex; margin-left: 300px;gap: 50px; margin-top: 50px;font-size: medium;">
+                        <div>
+                            <li>Terms and Conditions</li>
+                        </div>
+                        <div>
+                            <li>Privacy Policy</li>
+                        </div>
+                        <div>
+                            <li>Refund Policy</li>
+                        </div>
+                        <div>
+                            <li>Country</li>
+                        </div>
+                    </div>
+
+                    <div style="width: 70%;margin-left: 200px;color: gray;">
+                        <p>Address: NALANDA 53/1 C, Manoj Arcade, 24th Main Rd, Sector 2, HSR Layout, Bengaluru -
+                            560102, Karnataka, India.Phone No:1800-212-7688
+                            © 2009-2024 - Simplilearn Solutions. All Rights Reserved. The certification names are the
+                            trademarks of their respective owners.</p>
+                    </div>
+                    <hr style="color: gray;margin-top: 60px;" />
+
+                    <div class="footerlast">
+                        <h3>Disclaimer</h3>
+                        <li>PMP, PMI, PMBOK, CAPM, PgMP, PfMP, ACP, PBA, RMP, SP, and OPM3 are registered marks of the
+                            Project Management Institute, Inc.</li>
+                        <li>IT Infrastructure Library is a [registered] trade mark of AXELOS Limited used, under
+                            permission of AXELOS Limited. All rights reserved.</li>
+                        <li>PMP, PMI, PMBOK, CAPM, PgMP, PfMP, ACP, PBA, RMP, SP, and OPM3 are registered marks of the
+                            Project Management Institute, Inc.</li>
+                        <li>The Swirl logo™ is a trade mark of AXELOS Limited, used under permission of AXELOS Limited.
+                            All rights reserved.</li>
+                        <li>PRINCE2® is a [registered] trade mark of AXELOS Limited, used under permission of AXELOS
+                            Limited. All rights reserved.</li>
+                        <li>MSP® is a [registered] trade mark of AXELOS Limited, used under permission of AXELOS
+                            Limited. All rights reserved.</li>
+                        <li>Certified ScrumMaster® (CSM) and Certified Scrum Trainer® (CST) are registered trademarks of
+                            SCRUM ALLIANCE®</li>
+                        <li>Professional Scrum Master is a registered trademark of Scrum.org</li>
+                        <li>The APMG-International Finance for Non-Financial Managers and Swirl Device logo is a trade
+                            mark of The APM Group Limited.</li>
+                        <li>The Open Group®, TOGAF® are trademarks of The Open Group.</li>
+                        <li>IIBA®, the IIBA® logo, BABOK® and Business Analysis Body of Knowledge® are registered
+                            trademarks owned by International Institute of Business Analysis.</li>
+                        <li>CBAP® is a registered certification mark owned by International Institute of Business
+                            Analysis. Certified Business Analysis Professional, EEP and the EEP logo are trademarks
+                            owned by International Institute of Business Analysis.</li>
+                        <li>COBIT® is a trademark of ISACA® registered in the United States and other countries.</li>
+                        <li>CISA® is a Registered Trade Mark of the Information Systems Audit and Control Association
+                            (ISACA) and the IT Governance Institute.</li>
+                        <li>CISSP® is a registered mark of The International Information Systems Security Certification
+                            Consortium ((ISC)2).</li>
+                        <li>CISCO®, CCNA®, and CCNP® are trademarks of Cisco and registered trademarks in the United
+                            States and certain other countries.</li>
+                        <li>Simplilearn and its affiliates, predecessors, successors and assigns are in no way
+                            associated, sponsored or promoted by SAP SE and neither do they provide any SAP based online
+                            or real-time courses or trainings</li>
+                        <li>The KPMG name and logo are trademarks used under license by the independent member firms of
+                            the KPMG global organization. KPMG International’s Trademarks are the sole property of KPMG
+                            International and their use here does not.</li>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </div>
+        </div>
     </header>
+    <script src="script.js"></script>
 </body>
 
 </html>
